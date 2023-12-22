@@ -37,11 +37,11 @@ module "web_app_1" {
   source = "../web-app-module"
 
   # Input Variables
-  bucket_prefix    = "web-app-1-data"
+  bucket_name      = "web-app-1-devops-directive-web-app-data"
   domain           = "devopsdeployed.com"
   app_name         = "web-app-1"
   environment_name = "production"
-  instance_type    = "t2.micro"
+  instance_type    = "t2.small"
   create_dns_zone  = true
   db_name          = "webapp1db"
   db_user          = "foo"
@@ -52,11 +52,11 @@ module "web_app_2" {
   source = "../web-app-module"
 
   # Input Variables
-  bucket_prefix    = "web-app-2-data"
+  bucket_name      = "web-app-2-devops-directive-web-app-data"
   domain           = "anotherdevopsdeployed.com"
   app_name         = "web-app-2"
   environment_name = "production"
-  instance_type    = "t2.micro"
+  instance_type    = "t2.small"
   create_dns_zone  = true
   db_name          = "webapp2db"
   db_user          = "bar"
